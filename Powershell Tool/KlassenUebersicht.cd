@@ -10,7 +10,7 @@
   <Class Name="Powershell_Tool.PSOU">
     <Position X="5.75" Y="2.25" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAQAgAAAAAIEAAACAAQIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAQAgAAAAAIEAAECAAQIAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PSOU.cs</FileName>
     </TypeIdentifier>
   </Class>
