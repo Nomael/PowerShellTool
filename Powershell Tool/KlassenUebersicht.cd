@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Powershell_Tool.PSUser">
+    <Position X="8.25" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAggAAAAIEAAAGAAQIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PSUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Powershell_Tool.PSOU">
+    <Position X="5.75" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAgAAAAAIEAAACAAQIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PSOU.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Powershell_Tool.PSGroup">
+    <Position X="10.75" Y="2.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAgAAAAAIEgAACAAQIAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>PSGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
