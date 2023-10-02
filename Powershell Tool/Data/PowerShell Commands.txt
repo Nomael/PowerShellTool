@@ -1,4 +1,0 @@
-New-ADOrganizationalUnit -Name "r" -Path "OU=r,DC=ITW,DC=intern" -ProtectedFromAccidentalDeletion $false
-New-ADOrganizationalUnit -Name " " -Path "OU= ,DC= ,DC= " -ProtectedFromAccidentalDeletion $False
-New-ADOrganizationalUnit -Name " " -Path "OU= ,DC= ,DC= " -ProtectedFromAccidentalDeletion $false
-New-ADOrganizationalUnit -Name " " -Path "OU= ,DC= ,DC= " -ProtectedFromAccidentalDeletion $true
