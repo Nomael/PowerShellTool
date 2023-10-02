@@ -90,7 +90,7 @@ namespace Powershell_Tool
 
         private void btn_SaveDNTLD_Click(object sender, EventArgs e)
         {
-            Data_Write("Distinguished_Name.txt", tBox_DN.Text + ";" + tBox_TLD.Text);
+            Data_Write("Data_Distinguished_Name.txt", tBox_DN.Text + ";" + tBox_TLD.Text);
             ClearBox(0);
         }
 
@@ -120,7 +120,7 @@ namespace Powershell_Tool
 
             cPSOU.CreatePath();
 
-            Data_Write("PowerShell Commands.txt", cPSOU.ToString());
+            Data_Write("Data_PowerShell-Commands.txt", cPSOU.ToString());
         }
     }
 }
