@@ -87,15 +87,15 @@
             this.lbl_OUBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_OUBase.Location = new System.Drawing.Point(297, 11);
             this.lbl_OUBase.Name = "lbl_OUBase";
-            this.lbl_OUBase.Size = new System.Drawing.Size(238, 17);
+            this.lbl_OUBase.Size = new System.Drawing.Size(430, 17);
             this.lbl_OUBase.TabIndex = 14;
-            this.lbl_OUBase.Text = "Übergeordnete Organisationseinheit";
+            this.lbl_OUBase.Text = "Übergeordnete Organisationseinheit (OU / OU.ÜberOU.ÜberOU...)";
             // 
             // tBox_OUBase
             // 
             this.tBox_OUBase.Location = new System.Drawing.Point(300, 34);
             this.tBox_OUBase.Name = "tBox_OUBase";
-            this.tBox_OUBase.Size = new System.Drawing.Size(262, 20);
+            this.tBox_OUBase.Size = new System.Drawing.Size(427, 20);
             this.tBox_OUBase.TabIndex = 13;
             this.tBox_OUBase.TabStop = false;
             // 
@@ -164,7 +164,7 @@
             // 
             this.tBox_DN.Location = new System.Drawing.Point(816, 34);
             this.tBox_DN.Name = "tBox_DN";
-            this.tBox_DN.Size = new System.Drawing.Size(172, 20);
+            this.tBox_DN.Size = new System.Drawing.Size(186, 20);
             this.tBox_DN.TabIndex = 1;
             this.tBox_DN.TabStop = false;
             // 
@@ -172,7 +172,7 @@
             // 
             this.tBox_TLD.Location = new System.Drawing.Point(816, 84);
             this.tBox_TLD.Name = "tBox_TLD";
-            this.tBox_TLD.Size = new System.Drawing.Size(172, 20);
+            this.tBox_TLD.Size = new System.Drawing.Size(186, 20);
             this.tBox_TLD.TabIndex = 2;
             this.tBox_TLD.TabStop = false;
             // 
@@ -181,9 +181,9 @@
             this.lbl_DN.AutoSize = true;
             this.lbl_DN.Location = new System.Drawing.Point(813, 18);
             this.lbl_DN.Name = "lbl_DN";
-            this.lbl_DN.Size = new System.Drawing.Size(125, 13);
+            this.lbl_DN.Size = new System.Drawing.Size(195, 13);
             this.lbl_DN.TabIndex = 4;
-            this.lbl_DN.Text = "Domain Name (example):";
+            this.lbl_DN.Text = "Domain Name (example / sub.example):";
             // 
             // lbl_TLD
             // 
@@ -199,7 +199,7 @@
             this.btn_SaveDNTLD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SaveDNTLD.Location = new System.Drawing.Point(816, 110);
             this.btn_SaveDNTLD.Name = "btn_SaveDNTLD";
-            this.btn_SaveDNTLD.Size = new System.Drawing.Size(172, 36);
+            this.btn_SaveDNTLD.Size = new System.Drawing.Size(186, 36);
             this.btn_SaveDNTLD.TabIndex = 6;
             this.btn_SaveDNTLD.TabStop = false;
             this.btn_SaveDNTLD.Text = "Save";
@@ -211,7 +211,7 @@
             this.btn_ReadDNTLD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ReadDNTLD.Location = new System.Drawing.Point(815, 280);
             this.btn_ReadDNTLD.Name = "btn_ReadDNTLD";
-            this.btn_ReadDNTLD.Size = new System.Drawing.Size(173, 36);
+            this.btn_ReadDNTLD.Size = new System.Drawing.Size(187, 36);
             this.btn_ReadDNTLD.TabIndex = 7;
             this.btn_ReadDNTLD.TabStop = false;
             this.btn_ReadDNTLD.Text = "Read";
@@ -223,7 +223,7 @@
             this.cBox_TLD.FormattingEnabled = true;
             this.cBox_TLD.Location = new System.Drawing.Point(815, 253);
             this.cBox_TLD.Name = "cBox_TLD";
-            this.cBox_TLD.Size = new System.Drawing.Size(173, 21);
+            this.cBox_TLD.Size = new System.Drawing.Size(187, 21);
             this.cBox_TLD.TabIndex = 8;
             this.cBox_TLD.TabStop = false;
             // 
@@ -232,7 +232,7 @@
             this.cBox_DN.FormattingEnabled = true;
             this.cBox_DN.Location = new System.Drawing.Point(815, 203);
             this.cBox_DN.Name = "cBox_DN";
-            this.cBox_DN.Size = new System.Drawing.Size(173, 21);
+            this.cBox_DN.Size = new System.Drawing.Size(187, 21);
             this.cBox_DN.TabIndex = 9;
             this.cBox_DN.TabStop = false;
             // 
@@ -259,7 +259,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1000, 591);
+            this.ClientSize = new System.Drawing.Size(1014, 591);
             this.Controls.Add(this.lbl_STLD);
             this.Controls.Add(this.lbl_SDN);
             this.Controls.Add(this.cBox_DN);

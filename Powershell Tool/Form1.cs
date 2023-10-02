@@ -7,13 +7,15 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 
 namespace Powershell_Tool
 {
     public partial class Form1 : Form
     {
-        List<string> DisName = new List<string>();
+        List<string> DName = new List<string>();
+        List<string> TLDName = new List<string>();
         PSUser cPSUser;
         PSGroup cPSGroup;
 
@@ -28,11 +30,11 @@ namespace Powershell_Tool
         public void Data_Write(string pFName, string pContent)
         {
             string filename = $"../../Data/{pFName}";
-            string content = pContent + System.Environment.NewLine;
+            string content = pContent;
 
             StreamWriter myFile = new StreamWriter(filename, true);
 
-            myFile.Write(content);
+            myFile.WriteLine(content);
 
             myFile.Close();
         }
@@ -54,9 +56,13 @@ namespace Powershell_Tool
                     content = myFile.ReadLine();
                     zerlegung = content.Split(';');
 
-                    foreach (string z in zerlegung)
+                    if (zerlegung[0] != "")
                     {
-                        DisName.Add(z);
+                        DName.Add(zerlegung[0]);
+                    }
+                    if (zerlegung[1] != "")
+                    {
+                        TLDName.Add(zerlegung[1]);
                     }
                 }
 
@@ -80,8 +86,12 @@ namespace Powershell_Tool
                     break;
                 case 1:
                     cBox_DN.Items.Clear();
+                    cBox_DN.Text = string.Empty;
                     cBox_TLD.Items.Clear();
-                    DisName.Clear();
+                    cBox_TLD.Text = string.Empty;
+
+                    DName.Clear();
+                    TLDName.Clear();
                     break;
             }
         }
@@ -90,7 +100,14 @@ namespace Powershell_Tool
 
         private void btn_SaveDNTLD_Click(object sender, EventArgs e)
         {
-            Data_Write("Data_Distinguished_Name.txt", tBox_DN.Text + ";" + tBox_TLD.Text);
+            if (tBox_TLD.Text == "")
+            {
+                Data_Write("Data_Distinguished_Name.txt", tBox_DN.Text + ";");
+            }
+            else
+            {
+                Data_Write("Data_Distinguished_Name.txt", tBox_DN.Text + ";" + tBox_TLD.Text);
+            }
             ClearBox(0);
         }
 
@@ -98,11 +115,15 @@ namespace Powershell_Tool
         {
             ClearBox(1);
 
-            Data_Read("Distinguished_Name.txt");
-            for (int i = 1; i <= DisName.Count; i += 2)
+            Data_Read("Data_Distinguished_Name.txt");
+
+            foreach (string name in DName)
             {
-                cBox_DN.Items.Add(DisName[i - 1]);
-                cBox_TLD.Items.Add(DisName[i]);
+                cBox_DN.Items.Add(name);
+            }
+            foreach (string tld in TLDName)
+            {
+                cBox_TLD.Items.Add(tld);
             }
         }
 
@@ -113,8 +134,30 @@ namespace Powershell_Tool
             PSOU cPSOU = new PSOU();
 
             cPSOU.Name = tbox_OUName.Text;
-            cPSOU.OrganizationalUnit.Add(tBox_OUBase.Text);
-            cPSOU.DomainName.Add(cBox_DN.Text);
+            if (tBox_OUBase.Text.Contains('.') == true )
+            {
+                string[] zerlegung = tBox_OUBase.Text.Split('.');
+                foreach (string z in zerlegung)
+                {
+                    cPSOU.OrganizationalUnit.Add(z);
+                }
+            }else
+            {
+                cPSOU.OrganizationalUnit.Add(tBox_OUBase.Text);
+            }
+            if (cBox_DN.Text.Contains('.') == true)
+            {
+                string[] zerlegung = cBox_DN.Text.Split('.');
+                foreach (string z in zerlegung)
+                {
+                    cPSOU.DomainName.Add(z);
+                }
+            }
+            else
+            {
+                cPSOU.DomainName.Add(cBox_DN.Text);
+            }
+
             cPSOU.TLD = cBox_TLD.Text;
             cPSOU.Protected = chBox_PFAD.Checked;
 
