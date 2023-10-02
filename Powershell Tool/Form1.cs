@@ -20,6 +20,8 @@ namespace Powershell_Tool
         public Form1()
         {
             InitializeComponent();
+
+            GetInfo();
         }
 
 
@@ -37,7 +39,7 @@ namespace Powershell_Tool
             myFile.Close();
         }
 
-        public void Data_Read(string pFName)
+        public void Data_Read(string pFName, int pType)
         {
             string[] zerlegung;
             string filename = $"../../Data/{pFName}";
@@ -52,15 +54,25 @@ namespace Powershell_Tool
                 while (!myFile.EndOfStream)
                 {
                     content = myFile.ReadLine();
-                    zerlegung = content.Split(';');
 
-                    if (zerlegung[0] != "")
+                    switch (pType)
                     {
-                        DName.Add(zerlegung[0]);
-                    }
-                    if (zerlegung[1] != "")
-                    {
-                        TLDName.Add(zerlegung[1]);
+                        case 0:
+                            zerlegung = content.Split(';');
+
+                            if (zerlegung[0] != "")
+                            {
+                                DName.Add(zerlegung[0]);
+                            }
+                            if (zerlegung[1] != "")
+                            {
+                                TLDName.Add(zerlegung[1]);
+                            }
+                            break;
+
+                        default:
+                            break;
+
                     }
                 }
 
@@ -72,17 +84,11 @@ namespace Powershell_Tool
             }
         }
 
-        // QOL Features
-
         public void ClearBox(int pType)
         {
             switch (pType)
             {
                 case 0:
-                    tBox_DN.Clear();
-                    tBox_TLD.Clear();
-                    break;
-                case 1:
                     cBox_DN.Items.Clear();
                     cBox_DN.Text = string.Empty;
                     cBox_TLD.Items.Clear();
@@ -91,7 +97,42 @@ namespace Powershell_Tool
                     DName.Clear();
                     TLDName.Clear();
                     break;
+                case 1:
+                    tBox_DN.Clear();
+                    tBox_TLD.Clear();
+                    break;
+                case 2:
+                    tBox_PSOUBase.Clear();
+                    tBox_PSOUName.Clear();
+                    chBox_PSOUDel.Checked = false;
+                    break;
+                case 3:
+                    tBox_PSUName.Clear();
+                    tBox_PSUGName.Clear();
+                    tBox_PSUSName.Clear();
+                    tBox_PSUOU.Clear();
+                    break;
+                case 4:
+                    tBox_PSGName.Clear();
+                    cBox_PSGCategory.Text = string.Empty;
+                    cBox_PSGScope.Text = string.Empty;
+                    tBox_PSGOU.Clear();
+                    break;
+
+
+                default:
+                    break;
             }
+        }
+
+        private void GetInfo()
+        { 
+            cBox_PSGCategory.Items.Add("Security");
+            cBox_PSGCategory.Items.Add("Distribution");
+
+            cBox_PSGScope.Items.Add("DomainLocal");
+            cBox_PSGScope.Items.Add("Global");
+            cBox_PSGScope.Items.Add("Universal");
         }
 
         // Form 1 Controls
@@ -106,14 +147,14 @@ namespace Powershell_Tool
             {
                 Data_Write("Data_Distinguished_Name.txt", tBox_DN.Text + ";" + tBox_TLD.Text);
             }
-            ClearBox(0);
+            ClearBox(1);
         }
 
         private void btn_ReadDNTLD_Click(object sender, EventArgs e)
         {
-            ClearBox(1);
+            ClearBox(0);
 
-            Data_Read("Data_Distinguished_Name.txt");
+            Data_Read("Data_Distinguished_Name.txt", 0);
 
             foreach (string name in DName)
             {
@@ -131,17 +172,17 @@ namespace Powershell_Tool
         {
             PSOU cPSOU = new PSOU();
 
-            cPSOU.Name = tbox_PSOUName.Text;
-            if (tbox_PSOUBase.Text.Contains('.') == true )
+            cPSOU.Name = tBox_PSOUName.Text;
+            if (tBox_PSOUBase.Text.Contains('.') == true )
             {
-                string[] zerlegung = tbox_PSOUBase.Text.Split('.');
+                string[] zerlegung = tBox_PSOUBase.Text.Split('.');
                 foreach (string z in zerlegung)
                 {
                     cPSOU.OrganizationalUnit.Add(z);
                 }
             }else
             {
-                cPSOU.OrganizationalUnit.Add(tbox_PSOUBase.Text);
+                cPSOU.OrganizationalUnit.Add(tBox_PSOUBase.Text);
             }
             if (cBox_DN.Text.Contains('.') == true)
             {
@@ -162,6 +203,8 @@ namespace Powershell_Tool
             cPSOU.CreatePath();
 
             Data_Write("Data_PowerShell-Commands.txt", cPSOU.ToString());
+
+            //ClearBox(2);
         }
 
         private void btn_CreateUser_Click(object sender, EventArgs e)
@@ -202,8 +245,50 @@ namespace Powershell_Tool
             cPSUser.CreatePath();
 
             Data_Write("Data_PowerShell-Commands.txt", cPSUser.ToString());
+
+            //ClearBox(3);
         }
 
-        PSGroup cPSGroup;
+        private void btn_CreateGroup_Click(object sender, EventArgs e)
+        {
+            PSGroup cPSGroup = new PSGroup();
+
+            cPSGroup.Name = tBox_PSGName.Text;
+            cPSGroup.GroupCategory = cBox_PSGCategory.Text;
+            cPSGroup.GroupScope = cBox_PSGScope.Text;
+
+            if (tBox_PSGOU.Text.Contains('.') == true)
+            {
+                string[] zerlegung = tBox_PSGOU.Text.Split('.');
+                foreach (string z in zerlegung)
+                {
+                    cPSGroup.OrganizationalUnit.Add(z);
+                }
+            }
+            else
+            {
+                cPSGroup.OrganizationalUnit.Add(tBox_PSGOU.Text);
+            }
+            if (cBox_DN.Text.Contains('.') == true)
+            {
+                string[] zerlegung = cBox_DN.Text.Split('.');
+                foreach (string z in zerlegung)
+                {
+                    cPSGroup.DomainName.Add(z);
+                }
+            }
+            else
+            {
+                cPSGroup.DomainName.Add(cBox_DN.Text);
+            }
+
+            cPSGroup.TLD = cBox_TLD.Text;
+
+            cPSGroup.CreatePath();
+
+            Data_Write("Data_PowerShell-Commands.txt", cPSGroup.ToString());
+
+            //ClearBox(4);
+        }
     }
 }
