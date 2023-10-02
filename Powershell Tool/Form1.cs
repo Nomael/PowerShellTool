@@ -16,8 +16,6 @@ namespace Powershell_Tool
     {
         List<string> DName = new List<string>();
         List<string> TLDName = new List<string>();
-        PSUser cPSUser;
-        PSGroup cPSGroup;
 
         public Form1()
         {
@@ -133,17 +131,17 @@ namespace Powershell_Tool
         {
             PSOU cPSOU = new PSOU();
 
-            cPSOU.Name = tbox_OUName.Text;
-            if (tBox_OUBase.Text.Contains('.') == true )
+            cPSOU.Name = tbox_PSOUName.Text;
+            if (tbox_PSOUBase.Text.Contains('.') == true )
             {
-                string[] zerlegung = tBox_OUBase.Text.Split('.');
+                string[] zerlegung = tbox_PSOUBase.Text.Split('.');
                 foreach (string z in zerlegung)
                 {
                     cPSOU.OrganizationalUnit.Add(z);
                 }
             }else
             {
-                cPSOU.OrganizationalUnit.Add(tBox_OUBase.Text);
+                cPSOU.OrganizationalUnit.Add(tbox_PSOUBase.Text);
             }
             if (cBox_DN.Text.Contains('.') == true)
             {
@@ -159,11 +157,53 @@ namespace Powershell_Tool
             }
 
             cPSOU.TLD = cBox_TLD.Text;
-            cPSOU.Protected = chBox_PFAD.Checked;
+            cPSOU.Protected = chBox_PSOUDel.Checked;
 
             cPSOU.CreatePath();
 
             Data_Write("Data_PowerShell-Commands.txt", cPSOU.ToString());
         }
+
+        private void btn_CreateUser_Click(object sender, EventArgs e)
+        {
+            PSUser cPSUser = new PSUser();
+
+            cPSUser.Name = tBox_PSUName.Text;
+            cPSUser.GivenName = tBox_PSUGName.Text;
+            cPSUser.SurName = tBox_PSUSName.Text;
+
+            if (tBox_PSUOU.Text.Contains('.') == true)
+            {
+                string[] zerlegung = tBox_PSUOU.Text.Split('.');
+                foreach (string z in zerlegung)
+                {
+                    cPSUser.OrganizationalUnit.Add(z);
+                }
+            }
+            else
+            {
+                cPSUser.OrganizationalUnit.Add(tBox_PSUOU.Text);
+            }
+            if (cBox_DN.Text.Contains('.') == true)
+            {
+                string[] zerlegung = cBox_DN.Text.Split('.');
+                foreach (string z in zerlegung)
+                {
+                    cPSUser.DomainName.Add(z);
+                }
+            }
+            else
+            {
+                cPSUser.DomainName.Add(cBox_DN.Text);
+            }
+
+            cPSUser.TLD = cBox_TLD.Text;
+
+            cPSUser.CreatePath();
+
+            Data_Write("Data_PowerShell-Commands.txt", cPSUser.ToString());
+        }
+
+        PSGroup cPSGroup;
     }
 }

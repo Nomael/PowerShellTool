@@ -12,8 +12,8 @@ namespace Powershell_Tool
         public string GroupScope { get; set; } // DomainLocal, Global oder Universal
 
         public string TLD { get; set; } // Top Level Domain
-        public List<string> DomainName; // Name der Domain
-        public List<string> OrganizationalUnit; // Organisationseinheit / Abteilung
+        public List<string> DomainName = new List<string>(); // Name der Domain
+        public List<string> OrganizationalUnit = new List<string>(); // Organisationseinheit / Abteilung
         public string Path { get; set; } // Zusammensezung aus OU,DN und TLD
 
 

@@ -32,12 +32,13 @@
             this.tControl_Main = new System.Windows.Forms.TabControl();
             this.tPage_PSOU = new System.Windows.Forms.TabPage();
             this.lbl_OUBase = new System.Windows.Forms.Label();
-            this.tBox_OUBase = new System.Windows.Forms.TextBox();
+            this.tbox_PSOUBase = new System.Windows.Forms.TextBox();
             this.btn_CreateOU = new System.Windows.Forms.Button();
-            this.tbox_OUName = new System.Windows.Forms.TextBox();
-            this.chBox_PFAD = new System.Windows.Forms.CheckBox();
+            this.tbox_PSOUName = new System.Windows.Forms.TextBox();
+            this.chBox_PSOUDel = new System.Windows.Forms.CheckBox();
             this.lbl_OUName = new System.Windows.Forms.Label();
             this.tPage_PSUser = new System.Windows.Forms.TabPage();
+            this.btn_CreateUser = new System.Windows.Forms.Button();
             this.tPage_PSGroup = new System.Windows.Forms.TabPage();
             this.tBox_DN = new System.Windows.Forms.TextBox();
             this.tBox_TLD = new System.Windows.Forms.TextBox();
@@ -49,8 +50,17 @@
             this.cBox_DN = new System.Windows.Forms.ComboBox();
             this.lbl_STLD = new System.Windows.Forms.Label();
             this.lbl_SDN = new System.Windows.Forms.Label();
+            this.lbl_UOUPfad = new System.Windows.Forms.Label();
+            this.tBox_PSUOU = new System.Windows.Forms.TextBox();
+            this.tBox_PSUName = new System.Windows.Forms.TextBox();
+            this.lbl_UName = new System.Windows.Forms.Label();
+            this.tBox_PSUGName = new System.Windows.Forms.TextBox();
+            this.lbl_GName = new System.Windows.Forms.Label();
+            this.tBox_PSUSName = new System.Windows.Forms.TextBox();
+            this.lbl_SName = new System.Windows.Forms.Label();
             this.tControl_Main.SuspendLayout();
             this.tPage_PSOU.SuspendLayout();
+            this.tPage_PSUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // tControl_Main
@@ -69,10 +79,10 @@
             // 
             this.tPage_PSOU.BackColor = System.Drawing.Color.Transparent;
             this.tPage_PSOU.Controls.Add(this.lbl_OUBase);
-            this.tPage_PSOU.Controls.Add(this.tBox_OUBase);
+            this.tPage_PSOU.Controls.Add(this.tbox_PSOUBase);
             this.tPage_PSOU.Controls.Add(this.btn_CreateOU);
-            this.tPage_PSOU.Controls.Add(this.tbox_OUName);
-            this.tPage_PSOU.Controls.Add(this.chBox_PFAD);
+            this.tPage_PSOU.Controls.Add(this.tbox_PSOUName);
+            this.tPage_PSOU.Controls.Add(this.chBox_PSOUDel);
             this.tPage_PSOU.Controls.Add(this.lbl_OUName);
             this.tPage_PSOU.Location = new System.Drawing.Point(4, 22);
             this.tPage_PSOU.Name = "tPage_PSOU";
@@ -91,13 +101,13 @@
             this.lbl_OUBase.TabIndex = 14;
             this.lbl_OUBase.Text = "Übergeordnete Organisationseinheit (OU / OU.ÜberOU.ÜberOU...)";
             // 
-            // tBox_OUBase
+            // tbox_PSOUBase
             // 
-            this.tBox_OUBase.Location = new System.Drawing.Point(300, 34);
-            this.tBox_OUBase.Name = "tBox_OUBase";
-            this.tBox_OUBase.Size = new System.Drawing.Size(427, 20);
-            this.tBox_OUBase.TabIndex = 13;
-            this.tBox_OUBase.TabStop = false;
+            this.tbox_PSOUBase.Location = new System.Drawing.Point(300, 34);
+            this.tbox_PSOUBase.Name = "tbox_PSOUBase";
+            this.tbox_PSOUBase.Size = new System.Drawing.Size(427, 20);
+            this.tbox_PSOUBase.TabIndex = 13;
+            this.tbox_PSOUBase.TabStop = false;
             // 
             // btn_CreateOU
             // 
@@ -111,24 +121,24 @@
             this.btn_CreateOU.UseVisualStyleBackColor = true;
             this.btn_CreateOU.Click += new System.EventHandler(this.btn_CreateOU_Click);
             // 
-            // tbox_OUName
+            // tbox_PSOUName
             // 
-            this.tbox_OUName.Location = new System.Drawing.Point(6, 34);
-            this.tbox_OUName.Name = "tbox_OUName";
-            this.tbox_OUName.Size = new System.Drawing.Size(262, 20);
-            this.tbox_OUName.TabIndex = 2;
-            this.tbox_OUName.TabStop = false;
+            this.tbox_PSOUName.Location = new System.Drawing.Point(6, 34);
+            this.tbox_PSOUName.Name = "tbox_PSOUName";
+            this.tbox_PSOUName.Size = new System.Drawing.Size(262, 20);
+            this.tbox_PSOUName.TabIndex = 2;
+            this.tbox_PSOUName.TabStop = false;
             // 
-            // chBox_PFAD
+            // chBox_PSOUDel
             // 
-            this.chBox_PFAD.AutoSize = true;
-            this.chBox_PFAD.Location = new System.Drawing.Point(6, 76);
-            this.chBox_PFAD.Name = "chBox_PFAD";
-            this.chBox_PFAD.Size = new System.Drawing.Size(214, 17);
-            this.chBox_PFAD.TabIndex = 1;
-            this.chBox_PFAD.TabStop = false;
-            this.chBox_PFAD.Text = "Vor versehentlichem Löschen Schützen";
-            this.chBox_PFAD.UseVisualStyleBackColor = true;
+            this.chBox_PSOUDel.AutoSize = true;
+            this.chBox_PSOUDel.Location = new System.Drawing.Point(6, 76);
+            this.chBox_PSOUDel.Name = "chBox_PSOUDel";
+            this.chBox_PSOUDel.Size = new System.Drawing.Size(214, 17);
+            this.chBox_PSOUDel.TabIndex = 1;
+            this.chBox_PSOUDel.TabStop = false;
+            this.chBox_PSOUDel.Text = "Vor versehentlichem Löschen Schützen";
+            this.chBox_PSOUDel.UseVisualStyleBackColor = true;
             // 
             // lbl_OUName
             // 
@@ -143,12 +153,33 @@
             // tPage_PSUser
             // 
             this.tPage_PSUser.BackColor = System.Drawing.Color.Transparent;
+            this.tPage_PSUser.Controls.Add(this.tBox_PSUSName);
+            this.tPage_PSUser.Controls.Add(this.lbl_SName);
+            this.tPage_PSUser.Controls.Add(this.tBox_PSUGName);
+            this.tPage_PSUser.Controls.Add(this.lbl_GName);
+            this.tPage_PSUser.Controls.Add(this.lbl_UOUPfad);
+            this.tPage_PSUser.Controls.Add(this.tBox_PSUOU);
+            this.tPage_PSUser.Controls.Add(this.tBox_PSUName);
+            this.tPage_PSUser.Controls.Add(this.lbl_UName);
+            this.tPage_PSUser.Controls.Add(this.btn_CreateUser);
             this.tPage_PSUser.Location = new System.Drawing.Point(4, 22);
             this.tPage_PSUser.Name = "tPage_PSUser";
             this.tPage_PSUser.Padding = new System.Windows.Forms.Padding(3);
             this.tPage_PSUser.Size = new System.Drawing.Size(790, 541);
             this.tPage_PSUser.TabIndex = 1;
             this.tPage_PSUser.Text = "PowerShell User";
+            // 
+            // btn_CreateUser
+            // 
+            this.btn_CreateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CreateUser.Location = new System.Drawing.Point(6, 145);
+            this.btn_CreateUser.Name = "btn_CreateUser";
+            this.btn_CreateUser.Size = new System.Drawing.Size(173, 36);
+            this.btn_CreateUser.TabIndex = 13;
+            this.btn_CreateUser.TabStop = false;
+            this.btn_CreateUser.Text = "Create";
+            this.btn_CreateUser.UseVisualStyleBackColor = true;
+            this.btn_CreateUser.Click += new System.EventHandler(this.btn_CreateUser_Click);
             // 
             // tPage_PSGroup
             // 
@@ -254,6 +285,78 @@
             this.lbl_SDN.TabIndex = 10;
             this.lbl_SDN.Text = "Saved Domain Name:";
             // 
+            // lbl_UOUPfad
+            // 
+            this.lbl_UOUPfad.AutoSize = true;
+            this.lbl_UOUPfad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_UOUPfad.Location = new System.Drawing.Point(297, 3);
+            this.lbl_UOUPfad.Name = "lbl_UOUPfad";
+            this.lbl_UOUPfad.Size = new System.Drawing.Size(387, 17);
+            this.lbl_UOUPfad.TabIndex = 18;
+            this.lbl_UOUPfad.Text = "Pfad zur Organisationseinheit (OU / OU.ÜberOU.ÜberOU...)";
+            // 
+            // tBox_PSUOU
+            // 
+            this.tBox_PSUOU.Location = new System.Drawing.Point(300, 26);
+            this.tBox_PSUOU.Name = "tBox_PSUOU";
+            this.tBox_PSUOU.Size = new System.Drawing.Size(427, 20);
+            this.tBox_PSUOU.TabIndex = 17;
+            this.tBox_PSUOU.TabStop = false;
+            // 
+            // tBox_PSUName
+            // 
+            this.tBox_PSUName.Location = new System.Drawing.Point(6, 26);
+            this.tBox_PSUName.Name = "tBox_PSUName";
+            this.tBox_PSUName.Size = new System.Drawing.Size(262, 20);
+            this.tBox_PSUName.TabIndex = 16;
+            this.tBox_PSUName.TabStop = false;
+            // 
+            // lbl_UName
+            // 
+            this.lbl_UName.AutoSize = true;
+            this.lbl_UName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_UName.Location = new System.Drawing.Point(6, 3);
+            this.lbl_UName.Name = "lbl_UName";
+            this.lbl_UName.Size = new System.Drawing.Size(165, 17);
+            this.lbl_UName.TabIndex = 15;
+            this.lbl_UName.Text = "Username / Login Name:";
+            // 
+            // tBox_PSUGName
+            // 
+            this.tBox_PSUGName.Location = new System.Drawing.Point(6, 73);
+            this.tBox_PSUGName.Name = "tBox_PSUGName";
+            this.tBox_PSUGName.Size = new System.Drawing.Size(262, 20);
+            this.tBox_PSUGName.TabIndex = 20;
+            this.tBox_PSUGName.TabStop = false;
+            // 
+            // lbl_GName
+            // 
+            this.lbl_GName.AutoSize = true;
+            this.lbl_GName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_GName.Location = new System.Drawing.Point(6, 50);
+            this.lbl_GName.Name = "lbl_GName";
+            this.lbl_GName.Size = new System.Drawing.Size(159, 17);
+            this.lbl_GName.TabIndex = 19;
+            this.lbl_GName.Text = "Vorname / Given Name:";
+            // 
+            // tBox_PSUSName
+            // 
+            this.tBox_PSUSName.Location = new System.Drawing.Point(6, 119);
+            this.tBox_PSUSName.Name = "tBox_PSUSName";
+            this.tBox_PSUSName.Size = new System.Drawing.Size(262, 20);
+            this.tBox_PSUSName.TabIndex = 22;
+            this.tBox_PSUSName.TabStop = false;
+            // 
+            // lbl_SName
+            // 
+            this.lbl_SName.AutoSize = true;
+            this.lbl_SName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_SName.Location = new System.Drawing.Point(6, 96);
+            this.lbl_SName.Name = "lbl_SName";
+            this.lbl_SName.Size = new System.Drawing.Size(149, 17);
+            this.lbl_SName.TabIndex = 21;
+            this.lbl_SName.Text = "Nachname / Surname:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,6 +382,8 @@
             this.tControl_Main.ResumeLayout(false);
             this.tPage_PSOU.ResumeLayout(false);
             this.tPage_PSOU.PerformLayout();
+            this.tPage_PSUser.ResumeLayout(false);
+            this.tPage_PSUser.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -301,11 +406,20 @@
         private System.Windows.Forms.Label lbl_STLD;
         private System.Windows.Forms.Label lbl_SDN;
         private System.Windows.Forms.Label lbl_OUName;
-        private System.Windows.Forms.TextBox tbox_OUName;
-        private System.Windows.Forms.CheckBox chBox_PFAD;
+        private System.Windows.Forms.TextBox tbox_PSOUName;
+        private System.Windows.Forms.CheckBox chBox_PSOUDel;
         private System.Windows.Forms.Button btn_CreateOU;
         private System.Windows.Forms.Label lbl_OUBase;
-        private System.Windows.Forms.TextBox tBox_OUBase;
+        private System.Windows.Forms.TextBox tbox_PSOUBase;
+        private System.Windows.Forms.Button btn_CreateUser;
+        private System.Windows.Forms.Label lbl_UOUPfad;
+        private System.Windows.Forms.TextBox tBox_PSUOU;
+        private System.Windows.Forms.TextBox tBox_PSUName;
+        private System.Windows.Forms.Label lbl_UName;
+        private System.Windows.Forms.TextBox tBox_PSUSName;
+        private System.Windows.Forms.Label lbl_SName;
+        private System.Windows.Forms.TextBox tBox_PSUGName;
+        private System.Windows.Forms.Label lbl_GName;
     }
 }
 
