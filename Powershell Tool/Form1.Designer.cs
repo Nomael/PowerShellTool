@@ -98,7 +98,6 @@
             this.tBox_OUBase.Size = new System.Drawing.Size(262, 20);
             this.tBox_OUBase.TabIndex = 13;
             this.tBox_OUBase.TabStop = false;
-            this.tBox_OUBase.Text = " ";
             // 
             // btn_CreateOU
             // 
@@ -119,7 +118,6 @@
             this.tbox_OUName.Size = new System.Drawing.Size(262, 20);
             this.tbox_OUName.TabIndex = 2;
             this.tbox_OUName.TabStop = false;
-            this.tbox_OUName.Text = " ";
             // 
             // chBox_PFAD
             // 
@@ -169,7 +167,6 @@
             this.tBox_DN.Size = new System.Drawing.Size(172, 20);
             this.tBox_DN.TabIndex = 1;
             this.tBox_DN.TabStop = false;
-            this.tBox_DN.Text = " ";
             // 
             // tBox_TLD
             // 
@@ -178,7 +175,6 @@
             this.tBox_TLD.Size = new System.Drawing.Size(172, 20);
             this.tBox_TLD.TabIndex = 2;
             this.tBox_TLD.TabStop = false;
-            this.tBox_TLD.Text = " ";
             // 
             // lbl_DN
             // 
@@ -230,7 +226,6 @@
             this.cBox_TLD.Size = new System.Drawing.Size(173, 21);
             this.cBox_TLD.TabIndex = 8;
             this.cBox_TLD.TabStop = false;
-            this.cBox_TLD.Text = " ";
             // 
             // cBox_DN
             // 
@@ -240,7 +235,6 @@
             this.cBox_DN.Size = new System.Drawing.Size(173, 21);
             this.cBox_DN.TabIndex = 9;
             this.cBox_DN.TabStop = false;
-            this.cBox_DN.Text = " ";
             // 
             // lbl_STLD
             // 
