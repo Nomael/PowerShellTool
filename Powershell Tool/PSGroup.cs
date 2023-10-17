@@ -34,6 +34,11 @@ namespace Powershell_Tool
 
         public void CreatePath()
         {
+            if (TLD != "")
+            {
+                Path += "-Path \"";
+            }
+
             foreach (string OU in OrganizationalUnit)
             {
                 Path += "OU=" + OU + ",";
@@ -44,12 +49,15 @@ namespace Powershell_Tool
                 Path += "DC=" + DN + ",";
             }
 
-            Path += "DC=" + TLD;
+            if (TLD != "")
+            {
+                Path += "DC=" + TLD + "\"";
+            }
         }
 
         public override string ToString()
         {
-            return $"New-ADGroup -Name \"{Name}\" -GroupCategory {GroupCategory} -GroupScope {GroupScope} -Path \"{Path}\"";
+            return $"New-ADGroup -Name \"{Name}\" -GroupCategory {GroupCategory} -GroupScope {GroupScope} {Path}";
         }
     }
 }

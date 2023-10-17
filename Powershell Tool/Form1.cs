@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,10 @@ namespace Powershell_Tool
 {
     public partial class Form1 : Form
     {
+        string sysPathName = @"%USERPROFILE%\Documents\PowerShellTool\"; //$"../../Data/{pFName}";
+        string sysPath = "";
+        bool readExist = false;
+
         List<string> DName = new List<string>();
         List<string> TLDName = new List<string>();
 
@@ -21,15 +26,53 @@ namespace Powershell_Tool
         {
             InitializeComponent();
 
+            cBox_DN.Enabled = false;
+            cBox_TLD.Enabled = false;
+
+            sysPath = Environment.ExpandEnvironmentVariables(sysPathName);
+
+            Data_FolderCreation(sysPath);
+
             GetInfo();
         }
 
 
         // Data Operations
 
+        public void Data_FolderCreation(string pPath)
+        {
+            // Specify the directory you want to manipulate.
+            string path = pPath;
+
+            try
+            {
+                // Determine whether the directory exists.
+                if (Directory.Exists(path))
+                {
+                    //MessageBox.Show("That path exists already.");
+                    return;
+                }
+
+                // Try to create the directory.
+                DirectoryInfo di = Directory.CreateDirectory(path);
+                MessageBox.Show($"The directory was created successfully at {Directory.GetParent(path)} on " + Directory.GetCreationTime(path));
+
+                // Delete the directory.
+                //di.Delete();
+                //MessageBox.Show("The directory was deleted successfully.");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("The process failed: " + e.ToString());
+            }
+            finally {
+            lbl_FilePath.Text = "Path to Savefile: " + Directory.GetParent(path);
+            }
+        }
+
         public void Data_Write(string pFName, string pContent)
         {
-            string filename = $"../../Data/{pFName}";
+            string filename = sysPath + $"{pFName}";
             string content = pContent;
 
             StreamWriter myFile = new StreamWriter(filename, true);
@@ -41,8 +84,9 @@ namespace Powershell_Tool
 
         public void Data_Read(string pFName, int pType)
         {
+
             string[] zerlegung;
-            string filename = $"../../Data/{pFName}";
+            string filename = sysPath + $"{pFName}";
             string content;
 
             if (File.Exists(filename))
@@ -126,7 +170,7 @@ namespace Powershell_Tool
         }
 
         private void GetInfo()
-        { 
+        {
             cBox_PSGCategory.Items.Add("Security");
             cBox_PSGCategory.Items.Add("Distribution");
 
@@ -156,13 +200,31 @@ namespace Powershell_Tool
 
             Data_Read("Data_Distinguished_Name.txt", 0);
 
-            foreach (string name in DName)
+            if (readExist == true)
             {
-                cBox_DN.Items.Add(name);
-            }
-            foreach (string tld in TLDName)
-            {
-                cBox_TLD.Items.Add(tld);
+                foreach (string name in DName)
+                {
+                    cBox_DN.Items.Add(name);
+                }
+                foreach (string tld in TLDName)
+                {
+                    cBox_TLD.Items.Add(tld);
+                }
+
+                if (cBox_DN.Items != null)
+                {
+                    cBox_DN.Text = cBox_DN.Items[0].ToString();
+                }
+                if (cBox_TLD != null)
+                {
+                    cBox_TLD.Text = cBox_TLD.Items[0].ToString();
+                }
+
+                if (cBox_DN.Enabled != true || cBox_TLD.Enabled != true)
+                {
+                    cBox_DN.Enabled = true;
+                    cBox_TLD.Enabled = true;
+                }
             }
         }
 
@@ -173,17 +235,19 @@ namespace Powershell_Tool
             PSOU cPSOU = new PSOU();
 
             cPSOU.Name = tBox_PSOUName.Text;
-            if (tBox_PSOUBase.Text.Contains('.') == true )
+            if (tBox_PSOUBase.Text.Contains('.') == true)
             {
                 string[] zerlegung = tBox_PSOUBase.Text.Split('.');
                 foreach (string z in zerlegung)
                 {
                     cPSOU.OrganizationalUnit.Add(z);
                 }
-            }else
+            }
+            else if (tBox_PSOUBase.Text != "")
             {
                 cPSOU.OrganizationalUnit.Add(tBox_PSOUBase.Text);
             }
+
             if (cBox_DN.Text.Contains('.') == true)
             {
                 string[] zerlegung = cBox_DN.Text.Split('.');
@@ -192,7 +256,7 @@ namespace Powershell_Tool
                     cPSOU.DomainName.Add(z);
                 }
             }
-            else
+            else if (cBox_DN.Text != "")
             {
                 cPSOU.DomainName.Add(cBox_DN.Text);
             }
@@ -223,10 +287,11 @@ namespace Powershell_Tool
                     cPSUser.OrganizationalUnit.Add(z);
                 }
             }
-            else
+            else if (tBox_PSOUBase.Text != "")
             {
                 cPSUser.OrganizationalUnit.Add(tBox_PSUOU.Text);
             }
+
             if (cBox_DN.Text.Contains('.') == true)
             {
                 string[] zerlegung = cBox_DN.Text.Split('.');
@@ -235,7 +300,7 @@ namespace Powershell_Tool
                     cPSUser.DomainName.Add(z);
                 }
             }
-            else
+            else if (cBox_DN.Text != "")
             {
                 cPSUser.DomainName.Add(cBox_DN.Text);
             }
@@ -265,7 +330,7 @@ namespace Powershell_Tool
                     cPSGroup.OrganizationalUnit.Add(z);
                 }
             }
-            else
+            else if (tBox_PSGOU.Text != "")
             {
                 cPSGroup.OrganizationalUnit.Add(tBox_PSGOU.Text);
             }
@@ -277,7 +342,7 @@ namespace Powershell_Tool
                     cPSGroup.DomainName.Add(z);
                 }
             }
-            else
+            else if (cBox_DN.Text != "")
             {
                 cPSGroup.DomainName.Add(cBox_DN.Text);
             }
