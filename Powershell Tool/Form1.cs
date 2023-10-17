@@ -121,6 +121,8 @@ namespace Powershell_Tool
                 }
 
                 myFile.Close();
+
+                readExist = true;
             }
             else
             {
