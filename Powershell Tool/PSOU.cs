@@ -32,25 +32,23 @@ namespace Powershell_Tool
 
         public void CreatePath()
         {
-            if (TLD != "")
+            if (OrganizationalUnit.Count > 0 && DomainName.Count > 0 && TLD != "")
             {
                 Path += "-Path \"";
-            }
 
-            foreach (string OU in OrganizationalUnit)
-            {
-                Path += "OU=" + OU + ",";
-            }
+                foreach (string OU in OrganizationalUnit)
+                {
+                    Path += "OU=" + OU + ",";
+                }
 
-            foreach (string DN in DomainName)
-            {
-                Path += "DC=" + DN + ",";
-            }
+                foreach (string DN in DomainName)
+                {
+                    Path += "DC=" + DN + ",";
+                }
 
-            if (TLD != "")
-            {
                 Path += "DC=" + TLD + "\"";
             }
+            
         }
 
         public override string ToString()
