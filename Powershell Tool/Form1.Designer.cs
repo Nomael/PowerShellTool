@@ -29,483 +29,523 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.tControl_Main = new System.Windows.Forms.TabControl();
-            this.tPage_PSOU = new System.Windows.Forms.TabPage();
-            this.lbl_OUBase = new System.Windows.Forms.Label();
-            this.tBox_PSOUBase = new System.Windows.Forms.TextBox();
-            this.btn_CreateOU = new System.Windows.Forms.Button();
-            this.tBox_PSOUName = new System.Windows.Forms.TextBox();
-            this.chBox_PSOUDel = new System.Windows.Forms.CheckBox();
-            this.lbl_OUName = new System.Windows.Forms.Label();
-            this.tPage_PSUser = new System.Windows.Forms.TabPage();
-            this.tBox_PSUSName = new System.Windows.Forms.TextBox();
-            this.lbl_SName = new System.Windows.Forms.Label();
-            this.tBox_PSUGName = new System.Windows.Forms.TextBox();
-            this.lbl_GName = new System.Windows.Forms.Label();
-            this.lbl_UOUPfad = new System.Windows.Forms.Label();
-            this.tBox_PSUOU = new System.Windows.Forms.TextBox();
-            this.tBox_PSUName = new System.Windows.Forms.TextBox();
-            this.lbl_UName = new System.Windows.Forms.Label();
-            this.btn_CreateUser = new System.Windows.Forms.Button();
-            this.tPage_PSGroup = new System.Windows.Forms.TabPage();
-            this.cBox_PSGScope = new System.Windows.Forms.ComboBox();
-            this.cBox_PSGCategory = new System.Windows.Forms.ComboBox();
-            this.lbl_PSGScope = new System.Windows.Forms.Label();
-            this.lbl_PSGCategory = new System.Windows.Forms.Label();
-            this.lbl_PSGOU = new System.Windows.Forms.Label();
-            this.tBox_PSGOU = new System.Windows.Forms.TextBox();
-            this.tBox_PSGName = new System.Windows.Forms.TextBox();
-            this.lbl_PSGName = new System.Windows.Forms.Label();
-            this.btn_CreateGroup = new System.Windows.Forms.Button();
-            this.tBox_DN = new System.Windows.Forms.TextBox();
-            this.tBox_TLD = new System.Windows.Forms.TextBox();
-            this.lbl_DN = new System.Windows.Forms.Label();
-            this.lbl_TLD = new System.Windows.Forms.Label();
-            this.btn_SaveDNTLD = new System.Windows.Forms.Button();
-            this.btn_ReadDNTLD = new System.Windows.Forms.Button();
-            this.cBox_TLD = new System.Windows.Forms.ComboBox();
-            this.cBox_DN = new System.Windows.Forms.ComboBox();
-            this.lbl_STLD = new System.Windows.Forms.Label();
-            this.lbl_SDN = new System.Windows.Forms.Label();
-            this.lbl_FilePath = new System.Windows.Forms.Label();
-            this.tControl_Main.SuspendLayout();
-            this.tPage_PSOU.SuspendLayout();
-            this.tPage_PSUser.SuspendLayout();
-            this.tPage_PSGroup.SuspendLayout();
-            this.SuspendLayout();
+            tControl_Main = new TabControl();
+            tPage_PSOU = new TabPage();
+            lbl_OUBase = new Label();
+            tBox_PSOUBase = new TextBox();
+            btn_CreateOU = new Button();
+            tBox_PSOUName = new TextBox();
+            chBox_PSOUDel = new CheckBox();
+            lbl_OUName = new Label();
+            tPage_PSUser = new TabPage();
+            tBox_PSUSName = new TextBox();
+            lbl_SName = new Label();
+            tBox_PSUGName = new TextBox();
+            lbl_GName = new Label();
+            lbl_UOUPfad = new Label();
+            tBox_PSUOU = new TextBox();
+            tBox_PSUName = new TextBox();
+            lbl_UName = new Label();
+            btn_CreateUser = new Button();
+            tPage_PSGroup = new TabPage();
+            cBox_PSGScope = new ComboBox();
+            cBox_PSGCategory = new ComboBox();
+            lbl_PSGScope = new Label();
+            lbl_PSGCategory = new Label();
+            lbl_PSGOU = new Label();
+            tBox_PSGOU = new TextBox();
+            tBox_PSGName = new TextBox();
+            lbl_PSGName = new Label();
+            btn_CreateGroup = new Button();
+            tBox_DN = new TextBox();
+            tBox_TLD = new TextBox();
+            lbl_DN = new Label();
+            lbl_TLD = new Label();
+            btn_SaveDNTLD = new Button();
+            btn_ReadDNTLD = new Button();
+            cBox_TLD = new ComboBox();
+            cBox_DN = new ComboBox();
+            lbl_STLD = new Label();
+            lbl_SDN = new Label();
+            lbl_FilePath = new Label();
+            tControl_Main.SuspendLayout();
+            tPage_PSOU.SuspendLayout();
+            tPage_PSUser.SuspendLayout();
+            tPage_PSGroup.SuspendLayout();
+            SuspendLayout();
             // 
             // tControl_Main
             // 
-            this.tControl_Main.Controls.Add(this.tPage_PSOU);
-            this.tControl_Main.Controls.Add(this.tPage_PSUser);
-            this.tControl_Main.Controls.Add(this.tPage_PSGroup);
-            this.tControl_Main.Location = new System.Drawing.Point(13, 11);
-            this.tControl_Main.Name = "tControl_Main";
-            this.tControl_Main.SelectedIndex = 0;
-            this.tControl_Main.Size = new System.Drawing.Size(797, 553);
-            this.tControl_Main.TabIndex = 0;
-            this.tControl_Main.TabStop = false;
+            tControl_Main.Controls.Add(tPage_PSOU);
+            tControl_Main.Controls.Add(tPage_PSUser);
+            tControl_Main.Controls.Add(tPage_PSGroup);
+            tControl_Main.Location = new Point(15, 13);
+            tControl_Main.Margin = new Padding(4, 3, 4, 3);
+            tControl_Main.Name = "tControl_Main";
+            tControl_Main.SelectedIndex = 0;
+            tControl_Main.Size = new Size(930, 638);
+            tControl_Main.TabIndex = 0;
+            tControl_Main.TabStop = false;
             // 
             // tPage_PSOU
             // 
-            this.tPage_PSOU.BackColor = System.Drawing.Color.Transparent;
-            this.tPage_PSOU.Controls.Add(this.lbl_OUBase);
-            this.tPage_PSOU.Controls.Add(this.tBox_PSOUBase);
-            this.tPage_PSOU.Controls.Add(this.btn_CreateOU);
-            this.tPage_PSOU.Controls.Add(this.tBox_PSOUName);
-            this.tPage_PSOU.Controls.Add(this.chBox_PSOUDel);
-            this.tPage_PSOU.Controls.Add(this.lbl_OUName);
-            this.tPage_PSOU.Location = new System.Drawing.Point(4, 22);
-            this.tPage_PSOU.Name = "tPage_PSOU";
-            this.tPage_PSOU.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tPage_PSOU.Size = new System.Drawing.Size(789, 527);
-            this.tPage_PSOU.TabIndex = 0;
-            this.tPage_PSOU.Text = "PowerShell OU";
+            tPage_PSOU.BackColor = Color.Transparent;
+            tPage_PSOU.Controls.Add(lbl_OUBase);
+            tPage_PSOU.Controls.Add(tBox_PSOUBase);
+            tPage_PSOU.Controls.Add(btn_CreateOU);
+            tPage_PSOU.Controls.Add(tBox_PSOUName);
+            tPage_PSOU.Controls.Add(chBox_PSOUDel);
+            tPage_PSOU.Controls.Add(lbl_OUName);
+            tPage_PSOU.Location = new Point(4, 24);
+            tPage_PSOU.Margin = new Padding(4, 3, 4, 3);
+            tPage_PSOU.Name = "tPage_PSOU";
+            tPage_PSOU.Padding = new Padding(4, 3, 4, 3);
+            tPage_PSOU.Size = new Size(922, 610);
+            tPage_PSOU.TabIndex = 0;
+            tPage_PSOU.Text = "PowerShell OU";
             // 
             // lbl_OUBase
             // 
-            this.lbl_OUBase.AutoSize = true;
-            this.lbl_OUBase.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_OUBase.Location = new System.Drawing.Point(297, 11);
-            this.lbl_OUBase.Name = "lbl_OUBase";
-            this.lbl_OUBase.Size = new System.Drawing.Size(392, 17);
-            this.lbl_OUBase.TabIndex = 14;
-            this.lbl_OUBase.Text = "Path to Organizational Unit (OU / OU.ParentOU.ParentOU...)";
+            lbl_OUBase.AutoSize = true;
+            lbl_OUBase.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_OUBase.Location = new Point(346, 13);
+            lbl_OUBase.Margin = new Padding(4, 0, 4, 0);
+            lbl_OUBase.Name = "lbl_OUBase";
+            lbl_OUBase.Size = new Size(392, 17);
+            lbl_OUBase.TabIndex = 14;
+            lbl_OUBase.Text = "Path to Organizational Unit (OU / OU.ParentOU.ParentOU...)";
             // 
             // tBox_PSOUBase
             // 
-            this.tBox_PSOUBase.Location = new System.Drawing.Point(300, 34);
-            this.tBox_PSOUBase.Name = "tBox_PSOUBase";
-            this.tBox_PSOUBase.Size = new System.Drawing.Size(427, 20);
-            this.tBox_PSOUBase.TabIndex = 13;
-            this.tBox_PSOUBase.TabStop = false;
+            tBox_PSOUBase.Location = new Point(350, 39);
+            tBox_PSOUBase.Margin = new Padding(4, 3, 4, 3);
+            tBox_PSOUBase.Name = "tBox_PSOUBase";
+            tBox_PSOUBase.Size = new Size(497, 23);
+            tBox_PSOUBase.TabIndex = 13;
+            tBox_PSOUBase.TabStop = false;
             // 
             // btn_CreateOU
             // 
-            this.btn_CreateOU.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_CreateOU.Location = new System.Drawing.Point(3, 99);
-            this.btn_CreateOU.Name = "btn_CreateOU";
-            this.btn_CreateOU.Size = new System.Drawing.Size(173, 36);
-            this.btn_CreateOU.TabIndex = 12;
-            this.btn_CreateOU.TabStop = false;
-            this.btn_CreateOU.Text = "Create";
-            this.btn_CreateOU.UseVisualStyleBackColor = true;
-            this.btn_CreateOU.Click += new System.EventHandler(this.btn_CreateOU_Click);
+            btn_CreateOU.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_CreateOU.Location = new Point(4, 114);
+            btn_CreateOU.Margin = new Padding(4, 3, 4, 3);
+            btn_CreateOU.Name = "btn_CreateOU";
+            btn_CreateOU.Size = new Size(202, 42);
+            btn_CreateOU.TabIndex = 12;
+            btn_CreateOU.TabStop = false;
+            btn_CreateOU.Text = "Create";
+            btn_CreateOU.UseVisualStyleBackColor = true;
+            btn_CreateOU.Click += btn_CreateOU_Click;
             // 
             // tBox_PSOUName
             // 
-            this.tBox_PSOUName.Location = new System.Drawing.Point(6, 34);
-            this.tBox_PSOUName.Name = "tBox_PSOUName";
-            this.tBox_PSOUName.Size = new System.Drawing.Size(262, 20);
-            this.tBox_PSOUName.TabIndex = 2;
-            this.tBox_PSOUName.TabStop = false;
+            tBox_PSOUName.Location = new Point(7, 39);
+            tBox_PSOUName.Margin = new Padding(4, 3, 4, 3);
+            tBox_PSOUName.Name = "tBox_PSOUName";
+            tBox_PSOUName.Size = new Size(305, 23);
+            tBox_PSOUName.TabIndex = 2;
+            tBox_PSOUName.TabStop = false;
             // 
             // chBox_PSOUDel
             // 
-            this.chBox_PSOUDel.AutoSize = true;
-            this.chBox_PSOUDel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chBox_PSOUDel.Location = new System.Drawing.Point(6, 72);
-            this.chBox_PSOUDel.Name = "chBox_PSOUDel";
-            this.chBox_PSOUDel.Size = new System.Drawing.Size(226, 21);
-            this.chBox_PSOUDel.TabIndex = 1;
-            this.chBox_PSOUDel.TabStop = false;
-            this.chBox_PSOUDel.Text = "Protect from accidental deletion";
-            this.chBox_PSOUDel.UseVisualStyleBackColor = true;
+            chBox_PSOUDel.AutoSize = true;
+            chBox_PSOUDel.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            chBox_PSOUDel.Location = new Point(7, 83);
+            chBox_PSOUDel.Margin = new Padding(4, 3, 4, 3);
+            chBox_PSOUDel.Name = "chBox_PSOUDel";
+            chBox_PSOUDel.Size = new Size(226, 21);
+            chBox_PSOUDel.TabIndex = 1;
+            chBox_PSOUDel.TabStop = false;
+            chBox_PSOUDel.Text = "Protect from accidental deletion";
+            chBox_PSOUDel.UseVisualStyleBackColor = true;
             // 
             // lbl_OUName
             // 
-            this.lbl_OUName.AutoSize = true;
-            this.lbl_OUName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_OUName.Location = new System.Drawing.Point(6, 11);
-            this.lbl_OUName.Name = "lbl_OUName";
-            this.lbl_OUName.Size = new System.Drawing.Size(174, 17);
-            this.lbl_OUName.TabIndex = 0;
-            this.lbl_OUName.Text = "Organizational Unit Name:";
+            lbl_OUName.AutoSize = true;
+            lbl_OUName.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_OUName.Location = new Point(7, 13);
+            lbl_OUName.Margin = new Padding(4, 0, 4, 0);
+            lbl_OUName.Name = "lbl_OUName";
+            lbl_OUName.Size = new Size(174, 17);
+            lbl_OUName.TabIndex = 0;
+            lbl_OUName.Text = "Organizational Unit Name:";
             // 
             // tPage_PSUser
             // 
-            this.tPage_PSUser.BackColor = System.Drawing.Color.Transparent;
-            this.tPage_PSUser.Controls.Add(this.tBox_PSUSName);
-            this.tPage_PSUser.Controls.Add(this.lbl_SName);
-            this.tPage_PSUser.Controls.Add(this.tBox_PSUGName);
-            this.tPage_PSUser.Controls.Add(this.lbl_GName);
-            this.tPage_PSUser.Controls.Add(this.lbl_UOUPfad);
-            this.tPage_PSUser.Controls.Add(this.tBox_PSUOU);
-            this.tPage_PSUser.Controls.Add(this.tBox_PSUName);
-            this.tPage_PSUser.Controls.Add(this.lbl_UName);
-            this.tPage_PSUser.Controls.Add(this.btn_CreateUser);
-            this.tPage_PSUser.Location = new System.Drawing.Point(4, 22);
-            this.tPage_PSUser.Name = "tPage_PSUser";
-            this.tPage_PSUser.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tPage_PSUser.Size = new System.Drawing.Size(789, 527);
-            this.tPage_PSUser.TabIndex = 1;
-            this.tPage_PSUser.Text = "PowerShell User";
+            tPage_PSUser.BackColor = Color.Transparent;
+            tPage_PSUser.Controls.Add(tBox_PSUSName);
+            tPage_PSUser.Controls.Add(lbl_SName);
+            tPage_PSUser.Controls.Add(tBox_PSUGName);
+            tPage_PSUser.Controls.Add(lbl_GName);
+            tPage_PSUser.Controls.Add(lbl_UOUPfad);
+            tPage_PSUser.Controls.Add(tBox_PSUOU);
+            tPage_PSUser.Controls.Add(tBox_PSUName);
+            tPage_PSUser.Controls.Add(lbl_UName);
+            tPage_PSUser.Controls.Add(btn_CreateUser);
+            tPage_PSUser.Location = new Point(4, 24);
+            tPage_PSUser.Margin = new Padding(4, 3, 4, 3);
+            tPage_PSUser.Name = "tPage_PSUser";
+            tPage_PSUser.Padding = new Padding(4, 3, 4, 3);
+            tPage_PSUser.Size = new Size(922, 610);
+            tPage_PSUser.TabIndex = 1;
+            tPage_PSUser.Text = "PowerShell User";
             // 
             // tBox_PSUSName
             // 
-            this.tBox_PSUSName.Location = new System.Drawing.Point(6, 119);
-            this.tBox_PSUSName.Name = "tBox_PSUSName";
-            this.tBox_PSUSName.Size = new System.Drawing.Size(262, 20);
-            this.tBox_PSUSName.TabIndex = 22;
-            this.tBox_PSUSName.TabStop = false;
+            tBox_PSUSName.Location = new Point(7, 137);
+            tBox_PSUSName.Margin = new Padding(4, 3, 4, 3);
+            tBox_PSUSName.Name = "tBox_PSUSName";
+            tBox_PSUSName.Size = new Size(305, 23);
+            tBox_PSUSName.TabIndex = 22;
+            tBox_PSUSName.TabStop = false;
             // 
             // lbl_SName
             // 
-            this.lbl_SName.AutoSize = true;
-            this.lbl_SName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SName.Location = new System.Drawing.Point(6, 96);
-            this.lbl_SName.Name = "lbl_SName";
-            this.lbl_SName.Size = new System.Drawing.Size(151, 17);
-            this.lbl_SName.TabIndex = 21;
-            this.lbl_SName.Text = "Surname (Nachname):";
+            lbl_SName.AutoSize = true;
+            lbl_SName.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_SName.Location = new Point(7, 111);
+            lbl_SName.Margin = new Padding(4, 0, 4, 0);
+            lbl_SName.Name = "lbl_SName";
+            lbl_SName.Size = new Size(151, 17);
+            lbl_SName.TabIndex = 21;
+            lbl_SName.Text = "Surname (Nachname):";
             // 
             // tBox_PSUGName
             // 
-            this.tBox_PSUGName.Location = new System.Drawing.Point(6, 73);
-            this.tBox_PSUGName.Name = "tBox_PSUGName";
-            this.tBox_PSUGName.Size = new System.Drawing.Size(262, 20);
-            this.tBox_PSUGName.TabIndex = 20;
-            this.tBox_PSUGName.TabStop = false;
+            tBox_PSUGName.Location = new Point(7, 84);
+            tBox_PSUGName.Margin = new Padding(4, 3, 4, 3);
+            tBox_PSUGName.Name = "tBox_PSUGName";
+            tBox_PSUGName.Size = new Size(305, 23);
+            tBox_PSUGName.TabIndex = 20;
+            tBox_PSUGName.TabStop = false;
             // 
             // lbl_GName
             // 
-            this.lbl_GName.AutoSize = true;
-            this.lbl_GName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_GName.Location = new System.Drawing.Point(6, 50);
-            this.lbl_GName.Name = "lbl_GName";
-            this.lbl_GName.Size = new System.Drawing.Size(161, 17);
-            this.lbl_GName.TabIndex = 19;
-            this.lbl_GName.Text = "Given Name (Vorname):";
+            lbl_GName.AutoSize = true;
+            lbl_GName.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_GName.Location = new Point(7, 58);
+            lbl_GName.Margin = new Padding(4, 0, 4, 0);
+            lbl_GName.Name = "lbl_GName";
+            lbl_GName.Size = new Size(161, 17);
+            lbl_GName.TabIndex = 19;
+            lbl_GName.Text = "Given Name (Vorname):";
             // 
             // lbl_UOUPfad
             // 
-            this.lbl_UOUPfad.AutoSize = true;
-            this.lbl_UOUPfad.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_UOUPfad.Location = new System.Drawing.Point(297, 3);
-            this.lbl_UOUPfad.Name = "lbl_UOUPfad";
-            this.lbl_UOUPfad.Size = new System.Drawing.Size(392, 17);
-            this.lbl_UOUPfad.TabIndex = 18;
-            this.lbl_UOUPfad.Text = "Path to Organizational Unit (OU / OU.ParentOU.ParentOU...)";
+            lbl_UOUPfad.AutoSize = true;
+            lbl_UOUPfad.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_UOUPfad.Location = new Point(346, 3);
+            lbl_UOUPfad.Margin = new Padding(4, 0, 4, 0);
+            lbl_UOUPfad.Name = "lbl_UOUPfad";
+            lbl_UOUPfad.Size = new Size(392, 17);
+            lbl_UOUPfad.TabIndex = 18;
+            lbl_UOUPfad.Text = "Path to Organizational Unit (OU / OU.ParentOU.ParentOU...)";
             // 
             // tBox_PSUOU
             // 
-            this.tBox_PSUOU.Location = new System.Drawing.Point(300, 26);
-            this.tBox_PSUOU.Name = "tBox_PSUOU";
-            this.tBox_PSUOU.Size = new System.Drawing.Size(427, 20);
-            this.tBox_PSUOU.TabIndex = 17;
-            this.tBox_PSUOU.TabStop = false;
+            tBox_PSUOU.Location = new Point(350, 30);
+            tBox_PSUOU.Margin = new Padding(4, 3, 4, 3);
+            tBox_PSUOU.Name = "tBox_PSUOU";
+            tBox_PSUOU.Size = new Size(497, 23);
+            tBox_PSUOU.TabIndex = 17;
+            tBox_PSUOU.TabStop = false;
             // 
             // tBox_PSUName
             // 
-            this.tBox_PSUName.Location = new System.Drawing.Point(6, 26);
-            this.tBox_PSUName.Name = "tBox_PSUName";
-            this.tBox_PSUName.Size = new System.Drawing.Size(262, 20);
-            this.tBox_PSUName.TabIndex = 16;
-            this.tBox_PSUName.TabStop = false;
+            tBox_PSUName.Location = new Point(7, 30);
+            tBox_PSUName.Margin = new Padding(4, 3, 4, 3);
+            tBox_PSUName.Name = "tBox_PSUName";
+            tBox_PSUName.Size = new Size(305, 23);
+            tBox_PSUName.TabIndex = 16;
+            tBox_PSUName.TabStop = false;
             // 
             // lbl_UName
             // 
-            this.lbl_UName.AutoSize = true;
-            this.lbl_UName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_UName.Location = new System.Drawing.Point(6, 3);
-            this.lbl_UName.Name = "lbl_UName";
-            this.lbl_UName.Size = new System.Drawing.Size(165, 17);
-            this.lbl_UName.TabIndex = 15;
-            this.lbl_UName.Text = "Username / Login Name:";
+            lbl_UName.AutoSize = true;
+            lbl_UName.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_UName.Location = new Point(7, 3);
+            lbl_UName.Margin = new Padding(4, 0, 4, 0);
+            lbl_UName.Name = "lbl_UName";
+            lbl_UName.Size = new Size(165, 17);
+            lbl_UName.TabIndex = 15;
+            lbl_UName.Text = "Username / Login Name:";
             // 
             // btn_CreateUser
             // 
-            this.btn_CreateUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_CreateUser.Location = new System.Drawing.Point(6, 145);
-            this.btn_CreateUser.Name = "btn_CreateUser";
-            this.btn_CreateUser.Size = new System.Drawing.Size(173, 36);
-            this.btn_CreateUser.TabIndex = 13;
-            this.btn_CreateUser.TabStop = false;
-            this.btn_CreateUser.Text = "Create";
-            this.btn_CreateUser.UseVisualStyleBackColor = true;
-            this.btn_CreateUser.Click += new System.EventHandler(this.btn_CreateUser_Click);
+            btn_CreateUser.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_CreateUser.Location = new Point(7, 167);
+            btn_CreateUser.Margin = new Padding(4, 3, 4, 3);
+            btn_CreateUser.Name = "btn_CreateUser";
+            btn_CreateUser.Size = new Size(202, 42);
+            btn_CreateUser.TabIndex = 13;
+            btn_CreateUser.TabStop = false;
+            btn_CreateUser.Text = "Create";
+            btn_CreateUser.UseVisualStyleBackColor = true;
+            btn_CreateUser.Click += btn_CreateUser_Click;
             // 
             // tPage_PSGroup
             // 
-            this.tPage_PSGroup.BackColor = System.Drawing.Color.Transparent;
-            this.tPage_PSGroup.Controls.Add(this.cBox_PSGScope);
-            this.tPage_PSGroup.Controls.Add(this.cBox_PSGCategory);
-            this.tPage_PSGroup.Controls.Add(this.lbl_PSGScope);
-            this.tPage_PSGroup.Controls.Add(this.lbl_PSGCategory);
-            this.tPage_PSGroup.Controls.Add(this.lbl_PSGOU);
-            this.tPage_PSGroup.Controls.Add(this.tBox_PSGOU);
-            this.tPage_PSGroup.Controls.Add(this.tBox_PSGName);
-            this.tPage_PSGroup.Controls.Add(this.lbl_PSGName);
-            this.tPage_PSGroup.Controls.Add(this.btn_CreateGroup);
-            this.tPage_PSGroup.Location = new System.Drawing.Point(4, 22);
-            this.tPage_PSGroup.Name = "tPage_PSGroup";
-            this.tPage_PSGroup.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tPage_PSGroup.Size = new System.Drawing.Size(789, 527);
-            this.tPage_PSGroup.TabIndex = 2;
-            this.tPage_PSGroup.Text = "PowerShell Group";
+            tPage_PSGroup.BackColor = Color.Transparent;
+            tPage_PSGroup.Controls.Add(cBox_PSGScope);
+            tPage_PSGroup.Controls.Add(cBox_PSGCategory);
+            tPage_PSGroup.Controls.Add(lbl_PSGScope);
+            tPage_PSGroup.Controls.Add(lbl_PSGCategory);
+            tPage_PSGroup.Controls.Add(lbl_PSGOU);
+            tPage_PSGroup.Controls.Add(tBox_PSGOU);
+            tPage_PSGroup.Controls.Add(tBox_PSGName);
+            tPage_PSGroup.Controls.Add(lbl_PSGName);
+            tPage_PSGroup.Controls.Add(btn_CreateGroup);
+            tPage_PSGroup.Location = new Point(4, 24);
+            tPage_PSGroup.Margin = new Padding(4, 3, 4, 3);
+            tPage_PSGroup.Name = "tPage_PSGroup";
+            tPage_PSGroup.Padding = new Padding(4, 3, 4, 3);
+            tPage_PSGroup.Size = new Size(922, 610);
+            tPage_PSGroup.TabIndex = 2;
+            tPage_PSGroup.Text = "PowerShell Group";
             // 
             // cBox_PSGScope
             // 
-            this.cBox_PSGScope.FormattingEnabled = true;
-            this.cBox_PSGScope.Location = new System.Drawing.Point(6, 116);
-            this.cBox_PSGScope.Name = "cBox_PSGScope";
-            this.cBox_PSGScope.Size = new System.Drawing.Size(262, 21);
-            this.cBox_PSGScope.TabIndex = 31;
-            this.cBox_PSGScope.TabStop = false;
+            cBox_PSGScope.FormattingEnabled = true;
+            cBox_PSGScope.Location = new Point(7, 134);
+            cBox_PSGScope.Margin = new Padding(4, 3, 4, 3);
+            cBox_PSGScope.Name = "cBox_PSGScope";
+            cBox_PSGScope.Size = new Size(305, 23);
+            cBox_PSGScope.TabIndex = 31;
+            cBox_PSGScope.TabStop = false;
             // 
             // cBox_PSGCategory
             // 
-            this.cBox_PSGCategory.FormattingEnabled = true;
-            this.cBox_PSGCategory.Location = new System.Drawing.Point(6, 70);
-            this.cBox_PSGCategory.Name = "cBox_PSGCategory";
-            this.cBox_PSGCategory.Size = new System.Drawing.Size(262, 21);
-            this.cBox_PSGCategory.TabIndex = 12;
-            this.cBox_PSGCategory.TabStop = false;
+            cBox_PSGCategory.FormattingEnabled = true;
+            cBox_PSGCategory.Location = new Point(7, 81);
+            cBox_PSGCategory.Margin = new Padding(4, 3, 4, 3);
+            cBox_PSGCategory.Name = "cBox_PSGCategory";
+            cBox_PSGCategory.Size = new Size(305, 23);
+            cBox_PSGCategory.TabIndex = 12;
+            cBox_PSGCategory.TabStop = false;
             // 
             // lbl_PSGScope
             // 
-            this.lbl_PSGScope.AutoSize = true;
-            this.lbl_PSGScope.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PSGScope.Location = new System.Drawing.Point(6, 96);
-            this.lbl_PSGScope.Name = "lbl_PSGScope";
-            this.lbl_PSGScope.Size = new System.Drawing.Size(96, 17);
-            this.lbl_PSGScope.TabIndex = 30;
-            this.lbl_PSGScope.Text = "Group Scope:";
+            lbl_PSGScope.AutoSize = true;
+            lbl_PSGScope.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_PSGScope.Location = new Point(7, 111);
+            lbl_PSGScope.Margin = new Padding(4, 0, 4, 0);
+            lbl_PSGScope.Name = "lbl_PSGScope";
+            lbl_PSGScope.Size = new Size(96, 17);
+            lbl_PSGScope.TabIndex = 30;
+            lbl_PSGScope.Text = "Group Scope:";
             // 
             // lbl_PSGCategory
             // 
-            this.lbl_PSGCategory.AutoSize = true;
-            this.lbl_PSGCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PSGCategory.Location = new System.Drawing.Point(6, 50);
-            this.lbl_PSGCategory.Name = "lbl_PSGCategory";
-            this.lbl_PSGCategory.Size = new System.Drawing.Size(113, 17);
-            this.lbl_PSGCategory.TabIndex = 28;
-            this.lbl_PSGCategory.Text = "Group Category:";
+            lbl_PSGCategory.AutoSize = true;
+            lbl_PSGCategory.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_PSGCategory.Location = new Point(7, 58);
+            lbl_PSGCategory.Margin = new Padding(4, 0, 4, 0);
+            lbl_PSGCategory.Name = "lbl_PSGCategory";
+            lbl_PSGCategory.Size = new Size(113, 17);
+            lbl_PSGCategory.TabIndex = 28;
+            lbl_PSGCategory.Text = "Group Category:";
             // 
             // lbl_PSGOU
             // 
-            this.lbl_PSGOU.AutoSize = true;
-            this.lbl_PSGOU.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PSGOU.Location = new System.Drawing.Point(297, 3);
-            this.lbl_PSGOU.Name = "lbl_PSGOU";
-            this.lbl_PSGOU.Size = new System.Drawing.Size(392, 17);
-            this.lbl_PSGOU.TabIndex = 27;
-            this.lbl_PSGOU.Text = "Path to Organizational Unit (OU / OU.ParentOU.ParentOU...)";
+            lbl_PSGOU.AutoSize = true;
+            lbl_PSGOU.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_PSGOU.Location = new Point(346, 3);
+            lbl_PSGOU.Margin = new Padding(4, 0, 4, 0);
+            lbl_PSGOU.Name = "lbl_PSGOU";
+            lbl_PSGOU.Size = new Size(392, 17);
+            lbl_PSGOU.TabIndex = 27;
+            lbl_PSGOU.Text = "Path to Organizational Unit (OU / OU.ParentOU.ParentOU...)";
             // 
             // tBox_PSGOU
             // 
-            this.tBox_PSGOU.Location = new System.Drawing.Point(300, 26);
-            this.tBox_PSGOU.Name = "tBox_PSGOU";
-            this.tBox_PSGOU.Size = new System.Drawing.Size(427, 20);
-            this.tBox_PSGOU.TabIndex = 26;
-            this.tBox_PSGOU.TabStop = false;
+            tBox_PSGOU.Location = new Point(350, 30);
+            tBox_PSGOU.Margin = new Padding(4, 3, 4, 3);
+            tBox_PSGOU.Name = "tBox_PSGOU";
+            tBox_PSGOU.Size = new Size(497, 23);
+            tBox_PSGOU.TabIndex = 26;
+            tBox_PSGOU.TabStop = false;
             // 
             // tBox_PSGName
             // 
-            this.tBox_PSGName.Location = new System.Drawing.Point(6, 23);
-            this.tBox_PSGName.Name = "tBox_PSGName";
-            this.tBox_PSGName.Size = new System.Drawing.Size(262, 20);
-            this.tBox_PSGName.TabIndex = 25;
-            this.tBox_PSGName.TabStop = false;
+            tBox_PSGName.Location = new Point(7, 27);
+            tBox_PSGName.Margin = new Padding(4, 3, 4, 3);
+            tBox_PSGName.Name = "tBox_PSGName";
+            tBox_PSGName.Size = new Size(305, 23);
+            tBox_PSGName.TabIndex = 25;
+            tBox_PSGName.TabStop = false;
             // 
             // lbl_PSGName
             // 
-            this.lbl_PSGName.AutoSize = true;
-            this.lbl_PSGName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PSGName.Location = new System.Drawing.Point(6, 3);
-            this.lbl_PSGName.Name = "lbl_PSGName";
-            this.lbl_PSGName.Size = new System.Drawing.Size(93, 17);
-            this.lbl_PSGName.TabIndex = 24;
-            this.lbl_PSGName.Text = "Group Name:";
+            lbl_PSGName.AutoSize = true;
+            lbl_PSGName.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_PSGName.Location = new Point(7, 3);
+            lbl_PSGName.Margin = new Padding(4, 0, 4, 0);
+            lbl_PSGName.Name = "lbl_PSGName";
+            lbl_PSGName.Size = new Size(93, 17);
+            lbl_PSGName.TabIndex = 24;
+            lbl_PSGName.Text = "Group Name:";
             // 
             // btn_CreateGroup
             // 
-            this.btn_CreateGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_CreateGroup.Location = new System.Drawing.Point(6, 145);
-            this.btn_CreateGroup.Name = "btn_CreateGroup";
-            this.btn_CreateGroup.Size = new System.Drawing.Size(173, 36);
-            this.btn_CreateGroup.TabIndex = 23;
-            this.btn_CreateGroup.TabStop = false;
-            this.btn_CreateGroup.Text = "Create";
-            this.btn_CreateGroup.UseVisualStyleBackColor = true;
-            this.btn_CreateGroup.Click += new System.EventHandler(this.btn_CreateGroup_Click);
+            btn_CreateGroup.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_CreateGroup.Location = new Point(7, 167);
+            btn_CreateGroup.Margin = new Padding(4, 3, 4, 3);
+            btn_CreateGroup.Name = "btn_CreateGroup";
+            btn_CreateGroup.Size = new Size(202, 42);
+            btn_CreateGroup.TabIndex = 23;
+            btn_CreateGroup.TabStop = false;
+            btn_CreateGroup.Text = "Create";
+            btn_CreateGroup.UseVisualStyleBackColor = true;
+            btn_CreateGroup.Click += btn_CreateGroup_Click;
             // 
             // tBox_DN
             // 
-            this.tBox_DN.Location = new System.Drawing.Point(816, 34);
-            this.tBox_DN.Name = "tBox_DN";
-            this.tBox_DN.Size = new System.Drawing.Size(186, 20);
-            this.tBox_DN.TabIndex = 1;
-            this.tBox_DN.TabStop = false;
+            tBox_DN.Location = new Point(952, 39);
+            tBox_DN.Margin = new Padding(4, 3, 4, 3);
+            tBox_DN.Name = "tBox_DN";
+            tBox_DN.Size = new Size(216, 23);
+            tBox_DN.TabIndex = 1;
+            tBox_DN.TabStop = false;
             // 
             // tBox_TLD
             // 
-            this.tBox_TLD.Location = new System.Drawing.Point(816, 84);
-            this.tBox_TLD.Name = "tBox_TLD";
-            this.tBox_TLD.Size = new System.Drawing.Size(186, 20);
-            this.tBox_TLD.TabIndex = 2;
-            this.tBox_TLD.TabStop = false;
+            tBox_TLD.Location = new Point(952, 97);
+            tBox_TLD.Margin = new Padding(4, 3, 4, 3);
+            tBox_TLD.Name = "tBox_TLD";
+            tBox_TLD.Size = new Size(216, 23);
+            tBox_TLD.TabIndex = 2;
+            tBox_TLD.TabStop = false;
             // 
             // lbl_DN
             // 
-            this.lbl_DN.AutoSize = true;
-            this.lbl_DN.Location = new System.Drawing.Point(813, 18);
-            this.lbl_DN.Name = "lbl_DN";
-            this.lbl_DN.Size = new System.Drawing.Size(195, 13);
-            this.lbl_DN.TabIndex = 4;
-            this.lbl_DN.Text = "Domain Name (example / sub.example):";
+            lbl_DN.AutoSize = true;
+            lbl_DN.Location = new Point(948, 21);
+            lbl_DN.Margin = new Padding(4, 0, 4, 0);
+            lbl_DN.Name = "lbl_DN";
+            lbl_DN.Size = new Size(219, 15);
+            lbl_DN.TabIndex = 4;
+            lbl_DN.Text = "Domain Name (example / sub.example):";
             // 
             // lbl_TLD
             // 
-            this.lbl_TLD.AutoSize = true;
-            this.lbl_TLD.Location = new System.Drawing.Point(813, 68);
-            this.lbl_TLD.Name = "lbl_TLD";
-            this.lbl_TLD.Size = new System.Drawing.Size(175, 13);
-            this.lbl_TLD.TabIndex = 5;
-            this.lbl_TLD.Text = "Top-Level-Domain (com / de / net):";
+            lbl_TLD.AutoSize = true;
+            lbl_TLD.Location = new Point(948, 78);
+            lbl_TLD.Margin = new Padding(4, 0, 4, 0);
+            lbl_TLD.Name = "lbl_TLD";
+            lbl_TLD.Size = new Size(196, 15);
+            lbl_TLD.TabIndex = 5;
+            lbl_TLD.Text = "Top-Level-Domain (com / de / net):";
             // 
             // btn_SaveDNTLD
             // 
-            this.btn_SaveDNTLD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SaveDNTLD.Location = new System.Drawing.Point(816, 110);
-            this.btn_SaveDNTLD.Name = "btn_SaveDNTLD";
-            this.btn_SaveDNTLD.Size = new System.Drawing.Size(186, 36);
-            this.btn_SaveDNTLD.TabIndex = 6;
-            this.btn_SaveDNTLD.TabStop = false;
-            this.btn_SaveDNTLD.Text = "Save";
-            this.btn_SaveDNTLD.UseVisualStyleBackColor = true;
-            this.btn_SaveDNTLD.Click += new System.EventHandler(this.btn_SaveDNTLD_Click);
+            btn_SaveDNTLD.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_SaveDNTLD.Location = new Point(952, 127);
+            btn_SaveDNTLD.Margin = new Padding(4, 3, 4, 3);
+            btn_SaveDNTLD.Name = "btn_SaveDNTLD";
+            btn_SaveDNTLD.Size = new Size(217, 42);
+            btn_SaveDNTLD.TabIndex = 6;
+            btn_SaveDNTLD.TabStop = false;
+            btn_SaveDNTLD.Text = "Save";
+            btn_SaveDNTLD.UseVisualStyleBackColor = true;
+            btn_SaveDNTLD.Click += btn_SaveDNTLD_Click;
             // 
             // btn_ReadDNTLD
             // 
-            this.btn_ReadDNTLD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ReadDNTLD.Location = new System.Drawing.Point(815, 280);
-            this.btn_ReadDNTLD.Name = "btn_ReadDNTLD";
-            this.btn_ReadDNTLD.Size = new System.Drawing.Size(187, 36);
-            this.btn_ReadDNTLD.TabIndex = 7;
-            this.btn_ReadDNTLD.TabStop = false;
-            this.btn_ReadDNTLD.Text = "Read";
-            this.btn_ReadDNTLD.UseVisualStyleBackColor = true;
-            this.btn_ReadDNTLD.Click += new System.EventHandler(this.btn_ReadDNTLD_Click);
+            btn_ReadDNTLD.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_ReadDNTLD.Location = new Point(951, 323);
+            btn_ReadDNTLD.Margin = new Padding(4, 3, 4, 3);
+            btn_ReadDNTLD.Name = "btn_ReadDNTLD";
+            btn_ReadDNTLD.Size = new Size(218, 42);
+            btn_ReadDNTLD.TabIndex = 7;
+            btn_ReadDNTLD.TabStop = false;
+            btn_ReadDNTLD.Text = "Read";
+            btn_ReadDNTLD.UseVisualStyleBackColor = true;
+            btn_ReadDNTLD.Click += btn_ReadDNTLD_Click;
             // 
             // cBox_TLD
             // 
-            this.cBox_TLD.FormattingEnabled = true;
-            this.cBox_TLD.Location = new System.Drawing.Point(815, 253);
-            this.cBox_TLD.Name = "cBox_TLD";
-            this.cBox_TLD.Size = new System.Drawing.Size(187, 21);
-            this.cBox_TLD.TabIndex = 8;
-            this.cBox_TLD.TabStop = false;
+            cBox_TLD.FormattingEnabled = true;
+            cBox_TLD.Location = new Point(951, 292);
+            cBox_TLD.Margin = new Padding(4, 3, 4, 3);
+            cBox_TLD.Name = "cBox_TLD";
+            cBox_TLD.Size = new Size(218, 23);
+            cBox_TLD.TabIndex = 8;
+            cBox_TLD.TabStop = false;
             // 
             // cBox_DN
             // 
-            this.cBox_DN.FormattingEnabled = true;
-            this.cBox_DN.Location = new System.Drawing.Point(815, 203);
-            this.cBox_DN.Name = "cBox_DN";
-            this.cBox_DN.Size = new System.Drawing.Size(187, 21);
-            this.cBox_DN.TabIndex = 9;
-            this.cBox_DN.TabStop = false;
+            cBox_DN.FormattingEnabled = true;
+            cBox_DN.Location = new Point(951, 234);
+            cBox_DN.Margin = new Padding(4, 3, 4, 3);
+            cBox_DN.Name = "cBox_DN";
+            cBox_DN.Size = new Size(218, 23);
+            cBox_DN.TabIndex = 9;
+            cBox_DN.TabStop = false;
             // 
             // lbl_STLD
             // 
-            this.lbl_STLD.AutoSize = true;
-            this.lbl_STLD.Location = new System.Drawing.Point(812, 237);
-            this.lbl_STLD.Name = "lbl_STLD";
-            this.lbl_STLD.Size = new System.Drawing.Size(131, 13);
-            this.lbl_STLD.TabIndex = 11;
-            this.lbl_STLD.Text = "Saved Top-Level-Domain:";
+            lbl_STLD.AutoSize = true;
+            lbl_STLD.Location = new Point(947, 273);
+            lbl_STLD.Margin = new Padding(4, 0, 4, 0);
+            lbl_STLD.Name = "lbl_STLD";
+            lbl_STLD.Size = new Size(143, 15);
+            lbl_STLD.TabIndex = 11;
+            lbl_STLD.Text = "Saved Top-Level-Domain:";
             // 
             // lbl_SDN
             // 
-            this.lbl_SDN.AutoSize = true;
-            this.lbl_SDN.Location = new System.Drawing.Point(812, 187);
-            this.lbl_SDN.Name = "lbl_SDN";
-            this.lbl_SDN.Size = new System.Drawing.Size(111, 13);
-            this.lbl_SDN.TabIndex = 10;
-            this.lbl_SDN.Text = "Saved Domain Name:";
+            lbl_SDN.AutoSize = true;
+            lbl_SDN.Location = new Point(947, 216);
+            lbl_SDN.Margin = new Padding(4, 0, 4, 0);
+            lbl_SDN.Name = "lbl_SDN";
+            lbl_SDN.Size = new Size(121, 15);
+            lbl_SDN.TabIndex = 10;
+            lbl_SDN.Text = "Saved Domain Name:";
             // 
             // lbl_FilePath
             // 
-            this.lbl_FilePath.AutoSize = true;
-            this.lbl_FilePath.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_FilePath.Location = new System.Drawing.Point(10, 567);
-            this.lbl_FilePath.Name = "lbl_FilePath";
-            this.lbl_FilePath.Size = new System.Drawing.Size(115, 17);
-            this.lbl_FilePath.TabIndex = 12;
-            this.lbl_FilePath.Text = "Path to Savefile: ";
+            lbl_FilePath.AutoSize = true;
+            lbl_FilePath.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl_FilePath.Location = new Point(12, 654);
+            lbl_FilePath.Margin = new Padding(4, 0, 4, 0);
+            lbl_FilePath.Name = "lbl_FilePath";
+            lbl_FilePath.Size = new Size(115, 17);
+            lbl_FilePath.TabIndex = 12;
+            lbl_FilePath.Text = "Path to Savefile: ";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1014, 591);
-            this.Controls.Add(this.lbl_FilePath);
-            this.Controls.Add(this.lbl_STLD);
-            this.Controls.Add(this.lbl_SDN);
-            this.Controls.Add(this.cBox_DN);
-            this.Controls.Add(this.cBox_TLD);
-            this.Controls.Add(this.btn_ReadDNTLD);
-            this.Controls.Add(this.btn_SaveDNTLD);
-            this.Controls.Add(this.lbl_TLD);
-            this.Controls.Add(this.lbl_DN);
-            this.Controls.Add(this.tBox_TLD);
-            this.Controls.Add(this.tBox_DN);
-            this.Controls.Add(this.tControl_Main);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.Name = "Form1";
-            this.Text = "Powershell Tool";
-            this.tControl_Main.ResumeLayout(false);
-            this.tPage_PSOU.ResumeLayout(false);
-            this.tPage_PSOU.PerformLayout();
-            this.tPage_PSUser.ResumeLayout(false);
-            this.tPage_PSUser.PerformLayout();
-            this.tPage_PSGroup.ResumeLayout(false);
-            this.tPage_PSGroup.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.Control;
+            ClientSize = new Size(1183, 682);
+            Controls.Add(lbl_FilePath);
+            Controls.Add(lbl_STLD);
+            Controls.Add(lbl_SDN);
+            Controls.Add(cBox_DN);
+            Controls.Add(cBox_TLD);
+            Controls.Add(btn_ReadDNTLD);
+            Controls.Add(btn_SaveDNTLD);
+            Controls.Add(lbl_TLD);
+            Controls.Add(lbl_DN);
+            Controls.Add(tBox_TLD);
+            Controls.Add(tBox_DN);
+            Controls.Add(tControl_Main);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
+            Name = "Form1";
+            Text = "Powershell Tool";
+            tControl_Main.ResumeLayout(false);
+            tPage_PSOU.ResumeLayout(false);
+            tPage_PSOU.PerformLayout();
+            tPage_PSUser.ResumeLayout(false);
+            tPage_PSUser.PerformLayout();
+            tPage_PSGroup.ResumeLayout(false);
+            tPage_PSGroup.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
